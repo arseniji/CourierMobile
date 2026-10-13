@@ -16,6 +16,7 @@ import com.github.arseniji.couriermobile.feature.profile.ProfileScreen
 @Composable
 fun AppNavHost(
     navController: NavHostController,
+    onShowSnackbar: suspend (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     NavHost(
@@ -24,7 +25,7 @@ fun AppNavHost(
         modifier = modifier
     ) {
         composable<Screen.Main> {
-            HomeRoute()
+            HomeRoute(onShowSnackbar)
         }
         composable<Screen.Map> {
             MapScreen()

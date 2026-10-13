@@ -5,6 +5,8 @@ sealed interface HomeUiState {
     data class Success(
         val courierName: String,
         val storeName: String,
-        val isOnShift: Boolean
+        val isOnShift: Boolean,
+        val isShiftActionInProgress: Boolean,
+        val errorMessage: String?,
     ) : HomeUiState
 }

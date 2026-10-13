@@ -60,6 +60,7 @@ fun MainAppScreen() {
     ) { innerPadding ->
         AppNavHost(
             navController = navController,
+            onShowSnackbar = {message -> snackbarHostState.showSnackbar(message)},
             modifier = Modifier
                 .padding(innerPadding)
                 .consumeWindowInsets(innerPadding),

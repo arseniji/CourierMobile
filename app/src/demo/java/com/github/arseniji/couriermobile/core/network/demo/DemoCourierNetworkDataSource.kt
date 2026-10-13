@@ -9,6 +9,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import java.io.IOException
+import kotlin.random.Random
 
 class DemoCourierNetworkDataSource(
     private val assets: AssetManager,
@@ -25,10 +27,12 @@ class DemoCourierNetworkDataSource(
 
     override suspend fun startShift(): NetworkShift {
         delay(500)
+        if (Random.nextInt(3) == 0) throw IOException("demo: сервер недоступен")
         return NetworkShift(id = System.currentTimeMillis(), startedAt = System.currentTimeMillis())
     }
 
     override suspend fun endShift(shiftId: Long): NetworkShiftEnded{
+        if (Random.nextInt(3) == 0) throw IOException("demo: сервер недоступен")
         delay(500)
         return NetworkShiftEnded(shiftId=shiftId, endedAt = System.currentTimeMillis())
     }
