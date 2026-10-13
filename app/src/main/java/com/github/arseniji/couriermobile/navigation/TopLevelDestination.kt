@@ -1,20 +1,12 @@
-package com.github.arseniji.couriermobile.ui.navigation
+package com.github.arseniji.couriermobile.navigation
+
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Map
-import androidx.compose.material.icons.filled.Message
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.ui.graphics.vector.ImageVector
-import kotlinx.serialization.Serializable
-
-@Serializable
-sealed interface Screen {
-    @Serializable data object Main : Screen
-    @Serializable data object Map : Screen
-    @Serializable data object Messages : Screen
-    @Serializable data object Profile : Screen
-}
 
 data class TopLevelDestination(
     val screen: Screen,
@@ -25,6 +17,6 @@ data class TopLevelDestination(
 val topLevelDestinations = listOf(
     TopLevelDestination(Screen.Main, "Главная", Icons.Default.Home),
     TopLevelDestination(Screen.Map, "Карта", Icons.Default.Map),
-    TopLevelDestination(Screen.Messages, "Сообщения", Icons.Filled.Message),
+    TopLevelDestination(Screen.Messages, "Сообщения", Icons.AutoMirrored.Filled.Message),
     TopLevelDestination(Screen.Profile, "Профиль", Icons.Default.Person),
 )
