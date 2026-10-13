@@ -24,6 +24,18 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions += "contentType"
+    productFlavors {
+        create("demo") {
+            dimension = "contentType"
+            applicationIdSuffix = ".demo"
+            versionNameSuffix = "-demo"
+        }
+        create("prod") {
+            dimension = "contentType"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
