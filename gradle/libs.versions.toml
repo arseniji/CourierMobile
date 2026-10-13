@@ -15,12 +15,14 @@ navigationComposeVersion = "2.9.7"
 ui = "1.12.1"
 ksp = "2.3.12"
 room = "2.8.5"
+datastore = "1.2.1"
 koinBom = "4.2.2"
 maplibre = "13.6.1"
 zxing = "3.5.4"
 coil = "3.6.3"
 playServicesLocation = "21.4.0"
 coroutines = "1.11.0"
+datastoreCore = "1.2.1"
 
 [libraries]
 androidx-compose-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "materialIconsCore" }
@@ -58,6 +60,8 @@ zxing-core = { group = "com.google.zxing", name = "core", version.ref = "zxing" 
 coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+androidx-datastore = { group = "androidx.datastore", name = "datastore", version.ref = "datastore" }
+androidx-datastore-core = { group = "androidx.datastore", name = "datastore-core", version.ref = "datastoreCore" }
 
 [plugins]
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

@@ -3,6 +3,7 @@ package com.github.arseniji.couriermobile.ui
 import android.app.Application
 import com.github.arseniji.couriermobile.core.data.di.dataModule
 import com.github.arseniji.couriermobile.core.database.di.databaseModule
+import com.github.arseniji.couriermobile.core.datastore.di.dataStoreModule
 import com.github.arseniji.couriermobile.core.network.di.networkModule
 import com.github.arseniji.couriermobile.feature.home.di.homeModule
 import org.koin.android.ext.koin.androidContext
@@ -15,7 +16,7 @@ class CourierMobileApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@CourierMobileApplication)
-            modules(dataModule, homeModule, databaseModule, networkModule)
+            modules(dataModule, homeModule, databaseModule, networkModule, dataStoreModule)
         }
     }
 }
