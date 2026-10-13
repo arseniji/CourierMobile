@@ -3,22 +3,28 @@ package com.github.arseniji.couriermobile.feature.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.arseniji.couriermobile.core.data.repository.ShiftRepository
-import kotlinx.coroutines.flow.MutableStateFlow
+import com.github.arseniji.couriermobile.core.data.repository.UserRepository
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
-    private val shiftRepository: ShiftRepository
+    private val shiftRepository: ShiftRepository,
+    userRepository: UserRepository
 ) : ViewModel() {
-    val uiState: StateFlow<HomeUiState> = shiftRepository
-        .isOnShift
-        .map { onShift ->
-            HomeUiState.Success(courierName = "Вова", storeName = "Жопа", isOnShift = onShift)
-        }
+    val uiState: StateFlow<HomeUiState> = combine(
+        userRepository.user,
+        shiftRepository.isOnShift,
+        ) {user, isOnShift ->
+        HomeUiState.Success(
+            courierName = user.name,
+            storeName = user.storeName,
+            isOnShift = isOnShift
+        )
+    }
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5000),
