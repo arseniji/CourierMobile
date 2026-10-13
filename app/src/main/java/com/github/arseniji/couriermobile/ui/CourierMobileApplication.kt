@@ -2,6 +2,7 @@ package com.github.arseniji.couriermobile.ui
 
 import android.app.Application
 import com.github.arseniji.couriermobile.core.data.di.dataModule
+import com.github.arseniji.couriermobile.core.database.di.databaseModule
 import com.github.arseniji.couriermobile.feature.home.di.homeModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -13,7 +14,7 @@ class CourierMobileApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@CourierMobileApplication)
-            modules(dataModule, homeModule)
+            modules(dataModule, homeModule, databaseModule)
         }
     }
 }
