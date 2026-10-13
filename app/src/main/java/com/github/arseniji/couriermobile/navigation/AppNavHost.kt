@@ -5,7 +5,9 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.github.arseniji.couriermobile.feature.home.HomeRoute
 import com.github.arseniji.couriermobile.feature.home.HomeScreen
+import com.github.arseniji.couriermobile.feature.home.HomeUiState
 import com.github.arseniji.couriermobile.feature.map.MapScreen
 import com.github.arseniji.couriermobile.feature.messages.MessagesScreen
 import com.github.arseniji.couriermobile.feature.profile.ProfileScreen
@@ -22,7 +24,7 @@ fun AppNavHost(
         modifier = modifier
     ) {
         composable<Screen.Main> {
-            HomeScreen()
+            HomeRoute()
         }
         composable<Screen.Map> {
             MapScreen()
