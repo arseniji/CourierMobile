@@ -16,6 +16,7 @@ ui = "1.12.1"
 ksp = "2.3.12"
 room = "2.8.5"
 datastore = "1.2.1"
+desugarJdkLibs = "2.1.5"
 koinBom = "4.2.2"
 maplibre = "13.6.1"
 zxing = "3.5.4"
@@ -62,6 +63,7 @@ play-services-location = { group = "com.google.android.gms", name = "play-servic
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 androidx-datastore = { group = "androidx.datastore", name = "datastore", version.ref = "datastore" }
 androidx-datastore-core = { group = "androidx.datastore", name = "datastore-core", version.ref = "datastoreCore" }
+android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugarJdkLibs" }
 
 [plugins]
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

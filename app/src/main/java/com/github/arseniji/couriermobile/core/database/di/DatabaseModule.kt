@@ -14,4 +14,5 @@ val databaseModule = module {
         ).build()
     }
     single { get<CourierDatabase>().shiftDao() }
+    single { get<CourierDatabase>().slotDao() }
 }
