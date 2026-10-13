@@ -3,6 +3,7 @@ package com.github.arseniji.couriermobile.core.network.demo
 import android.content.res.AssetManager
 import com.github.arseniji.couriermobile.core.network.CourierNetworkDataSource
 import com.github.arseniji.couriermobile.core.network.model.NetworkShift
+import com.github.arseniji.couriermobile.core.network.model.NetworkShiftEnded
 import com.github.arseniji.couriermobile.core.network.model.NetworkUser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -27,5 +28,8 @@ class DemoCourierNetworkDataSource(
         return NetworkShift(id = System.currentTimeMillis(), startedAt = System.currentTimeMillis())
     }
 
-    override suspend fun endShift(): NetworkShift = TODO("потом")
+    override suspend fun endShift(shiftId: Long): NetworkShiftEnded{
+        delay(500)
+        return NetworkShiftEnded(shiftId=shiftId, endedAt = System.currentTimeMillis())
+    }
 }

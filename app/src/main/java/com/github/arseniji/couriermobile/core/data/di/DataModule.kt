@@ -9,6 +9,6 @@ import com.github.arseniji.couriermobile.core.data.repository.UserRepository
 import org.koin.dsl.module
 
 val dataModule = module {
-    single<ShiftRepository> { OfflineFirstShiftRepository(get()) }
+    single<ShiftRepository> { OfflineFirstShiftRepository(get(),get()) }
     single<UserRepository> { OfflineFirstUserRepository(get(),get()) }
 }
