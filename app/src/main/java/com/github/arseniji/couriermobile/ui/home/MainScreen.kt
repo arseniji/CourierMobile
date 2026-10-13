@@ -1,4 +1,4 @@
-package com.github.arseniji.courierapp.ui.home
+package com.github.arseniji.couriermobile.ui.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth

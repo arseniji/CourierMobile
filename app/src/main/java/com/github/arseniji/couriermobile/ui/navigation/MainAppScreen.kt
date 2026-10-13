@@ -1,4 +1,4 @@
-package com.github.arseniji.courierapp.ui.navigation
+package com.github.arseniji.couriermobile.ui.navigation
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.padding

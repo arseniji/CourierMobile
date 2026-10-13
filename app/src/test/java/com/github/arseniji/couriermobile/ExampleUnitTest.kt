@@ -1,4 +1,4 @@
-package com.github.arseniji.courierapp
+package com.github.arseniji.couriermobile
 
 import org.junit.Test
 

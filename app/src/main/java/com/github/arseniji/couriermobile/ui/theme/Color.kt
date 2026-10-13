@@ -1,4 +1,4 @@
-package com.github.arseniji.courierapp.ui.theme
+package com.github.arseniji.couriermobile.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.github.arseniji.courierapp.ui.map
+package com.github.arseniji.couriermobile.ui.map
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

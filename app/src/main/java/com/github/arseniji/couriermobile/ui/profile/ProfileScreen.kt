@@ -1,4 +1,4 @@
-package com.github.arseniji.courierapp.ui.profile
+package com.github.arseniji.couriermobile.ui.profile
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable

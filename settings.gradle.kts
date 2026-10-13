@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CourierApp"
+rootProject.name = "CourierMobile"
 include(":app")

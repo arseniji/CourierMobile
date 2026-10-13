@@ -1,4 +1,4 @@
-package com.github.arseniji.courierapp.ui.navigation
+package com.github.arseniji.couriermobile.ui.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
